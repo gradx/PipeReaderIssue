@@ -1,0 +1,36 @@
+imports:
+    - https://raw.githubusercontent.com/dotnet/crank/main/src/Microsoft.Crank.Jobs.Bombardier/bombardier.yml
+    - https://github.com/aspnet/Benchmarks/blob/main/scenarios/aspnet.profiles.yml?raw=true
+jobs:
+  server:
+    sources:
+      hello-sample:
+        localFolder: ../
+    project: hello-sample/Genie.Web.Api/Genie.Web.Api.csproj
+    noClean: true
+    port: 80
+scenarios:
+  hello:
+    application:
+      job: server
+    load:
+      job: bombardier
+      variables:
+        serverPort: 80
+        path: /errors
+        timeout: 5
+        duration: 5
+        #requests: 1
+        connections: 1
+        bodyFile: C:\Temp\help2\GenieDotNet\SharedFiles\EncryptionRequests\kyber_dilithium.req
+        verb: POST
+        stream: true
+profiles:
+  local:
+    jobs:
+      application:
+        endpoints: 
+          - "http://localhost:5010"
+      load:
+        endpoints: 
+          - "http://localhost:5010"

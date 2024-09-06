@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genie.Web.Api", "Genie.Web.Api.csproj", "{DD95B1B9-92E7-4F44-AAD4-B836CD4EB46A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedFiles", "SharedFiles", "{6BE6890F-D8A6-49D6-9D18-F82D88EB0953}"
+	ProjectSection(SolutionItems) = preProject
+		..\SharedFiles\appsettings.Development.json = ..\SharedFiles\appsettings.Development.json
+		..\SharedFiles\appsettings.json = ..\SharedFiles\appsettings.json
+		..\SharedFiles\appsettings.UnitTest.json = ..\SharedFiles\appsettings.UnitTest.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EncryptionRequests", "EncryptionRequests", "{D35379F5-0E80-494B-A991-C6394869D1C8}"
+	ProjectSection(SolutionItems) = preProject
+		..\SharedFiles\EncryptionRequests\kyber_dilithium.req = ..\SharedFiles\EncryptionRequests\kyber_dilithium.req
+		..\SharedFiles\EncryptionRequests\kyber_ed25519.req = ..\SharedFiles\EncryptionRequests\kyber_ed25519.req
+		..\SharedFiles\EncryptionRequests\x25519_dilithium.req = ..\SharedFiles\EncryptionRequests\x25519_dilithium.req
+		..\SharedFiles\EncryptionRequests\x25519_ed25519.req = ..\SharedFiles\EncryptionRequests\x25519_ed25519.req
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Crank", "Crank", "{10276720-934C-4AD4-868F-D4290F1FE755}"
+	ProjectSection(SolutionItems) = preProject
+		..\Crank\benchmark.yaml = ..\Crank\benchmark.yaml
+		..\Crank\start_crank.bat = ..\Crank\start_crank.bat
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD95B1B9-92E7-4F44-AAD4-B836CD4EB46A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD95B1B9-92E7-4F44-AAD4-B836CD4EB46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD95B1B9-92E7-4F44-AAD4-B836CD4EB46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD95B1B9-92E7-4F44-AAD4-B836CD4EB46A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D35379F5-0E80-494B-A991-C6394869D1C8} = {6BE6890F-D8A6-49D6-9D18-F82D88EB0953}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E145E9C1-1C32-4C32-B9E5-527B3264C841}
+	EndGlobalSection
+EndGlobal
