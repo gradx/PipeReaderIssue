@@ -9,6 +9,13 @@ app.MapPost("errors", async (HttpContext httpContext) =>
     return HttpStatusCode.OK;
 });
 
+app.MapPost("github_suggestion", async (HttpContext httpContext) =>
+{
+    var read = await httpContext.Request.BodyReader.ReadAsync(new CancellationToken());
+    httpContext.Request.BodyReader.AdvanceTo(read.Buffer.Start, read.Buffer.End);
+    return HttpStatusCode.OK;
+});
+
 app.MapPost("works3", async (HttpContext httpContext) =>
 {
     var ms = new byte[(int)httpContext.Request.ContentLength];
